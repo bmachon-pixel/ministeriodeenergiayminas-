@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINEM - Ministerio de Energía y Minas</title>
+
+<style>
+:root{
+  --rojo:#C8102E;
+  --gris:#5A5A5A;
+  --gris-claro:#F2F2F2;
+  --oscuro:#1A1A1A;
+  --blanco:#FFFFFF;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.7;
+  color:var(--oscuro);
+}
+
+/* HEADER */
+header{
+  background:var(--gris);
+  color:var(--blanco);
+  padding:20px 40px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  width:90px;
+  background:#fff;
+  padding:6px;
+  border-radius:6px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:16px;
+  margin-top:15px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px;
+}
+
+nav a:hover{color:var(--rojo);}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(rgba(90,90,90,0.9),rgba(90,90,90,0.9)),
+    url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  height:75vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:20px;
+}
+
+.hero h2{
+  font-size:44px;
+}
+
+.hero span{color:var(--rojo);}
+
+.hero p{
+  max-width:900px;
+  font-size:20px;
+  margin-top:15px;
+}
+
+/* SECCIONES */
+section{
+  padding:70px 40px;
+  max-width:1200px;
+  margin:auto;
+}
+
+section h3{
+  font-size:32px;
+  margin-bottom:25px;
+  color:var(--gris);
+  border-left:6px solid var(--rojo);
+  padding-left:12px;
+}
+
+/* HORIZONTAL */
+.seccion-horizontal{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.seccion-horizontal .texto,
+.seccion-horizontal .lado{
+  flex:1;
+  min-width:280px;
+}
+
+.seccion-horizontal .lado{
+  background:var(--gris-claro);
+  padding:30px;
+  border-radius:14px;
+}
+
+/* GALERÍA */
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.galeria img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:14px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+  transition:transform .3s ease;
+}
+
+.galeria img:hover{
+  transform:scale(1.06);
+}
+
+/* MAPA */
+.mapa{
+  margin-top:35px;
+  width:100%;
+  height:480px;
+  border:5px solid var(--rojo);
+  border-radius:14px;
+  overflow:hidden;
+}
+
+/* FOOTER */
+footer{
+  background:var(--gris);
+  color:#fff;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer span{color:var(--rojo);}
+
+@media(max-width:600px){
+  .hero h2{font-size:30px;}
+  section{padding:50px 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-top">
+    <img src="https://images.seeklogo.com/logo-png/20/2/ministerio-de-energia-y-minas-peru-logo-png_seeklogo-205017.png" alt="Logo MINEM" class="logo">
+    <div>
+      <h1>Ministerio de Energía y Minas (-MINEM )</h1>
+      <p>Gobierno del Perú</p>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#empresa">Institución</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#mision">Misión</a></li>
+      <li><a href="#funciones">Funciones</a></li>
+      <li><a href="#programas">Programas</a></li>
+      <li><a href="#ambiente">Ambiente</a></li>
+      <li><a href="#transparencia">Transparencia</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2><span>ENERGÍA Y MINERÍA</span> PARA EL DESARROLLO DEL PERÚ</h2>
+    <p>Entidad rectora de las políticas públicas que promueven el aprovechamiento sostenible de los recursos energéticos y mineros.</p>
+  </div>
+</section>
+
+<section id="empresa">
+  <h3>¿Quiénes Somos?</h3>
+  <p>El Ministerio de Energía y Minas (MINEM) es el organismo del Poder Ejecutivo encargado de formular, dirigir y supervisar las políticas nacionales en los sectores energía y minería.</p>
+  <p>Su labor contribuye al desarrollo económico, social y ambiental del país, garantizando el uso responsable de los recursos naturales.</p>
+</section>
+
+<section id="historia">
+  <h3>Historia Institucional</h3>
+  <div class="seccion-horizontal">
+    <div class="texto">
+      <p>Desde su creación, el MINEM ha desempeñado un rol estratégico en la planificación energética y minera del Perú, fortaleciendo la seguridad energética y promoviendo inversiones responsables.</p>
+    </div>
+    <div class="lado">
+      <ul>
+        <li>Planificación sectorial</li>
+        <li>Regulación normativa</li>
+        <li>Gestión sostenible</li>
+        <li>Desarrollo territorial</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="mision">
+  <h3>Misión, Visión y Objetivos</h3>
+  <p><strong>Misión:</strong> Formular políticas públicas eficientes en energía y minería.</p>
+  <p><strong>Visión:</strong> Ser un ministerio líder en sostenibilidad y gobernanza.</p>
+  <p><strong>Objetivos:</strong> Garantizar acceso a energía, promover minería responsable y fortalecer la institucionalidad.</p>
+</section>
+
+<section id="funciones">
+  <h3>Funciones Principales</h3>
+  <div class="seccion-horizontal">
+    <div class="lado">
+      <ul>
+        <li>Formulación de políticas sectoriales</li>
+        <li>Supervisión y fiscalización</li>
+        <li>Promoción de inversiones</li>
+        <li>Acceso universal a la energía</li>
+        <li>Gestión ambiental sectorial</li>
+      </ul>
+    </div>
+    <div class="texto">
+      <p>El MINEM ejerce funciones rectoras garantizando el interés público, la sostenibilidad y la transparencia.</p>
+    </div>
+  </div>
+</section>
+
+<section id="programas">
+  <h3>Programas y Proyectos Estratégicos</h3>
+  <p>El MINEM impulsa programas de electrificación rural, energías renovables y desarrollo minero sostenible.</p>
+  <ul>
+    <li>Electrificación rural</li>
+    <li>Energías renovables</li>
+    <li>Formalización minera</li>
+    <li>Seguridad energética</li>
+  </ul>
+</section>
+
+<section id="ambiente">
+  <h3>Gestión Ambiental y Social</h3>
+  <p>El ministerio promueve la protección ambiental, la prevención de impactos y la participación ciudadana en los proyectos del sector.</p>
+</section>
+
+<section id="transparencia">
+  <h3>Transparencia y Gobierno Abierto</h3>
+  <p>El MINEM garantiza el acceso a la información pública, la rendición de cuentas y la lucha contra la corrupción.</p>
+</section>
+  <div class="galeria">
+    <!-- DUPLICA ESTAS ETIQUETAS PARA MÁS IMÁGENES -->
+    <img src="https://energiminas.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-06-at-9.43.03-AM-3.jpeg" alt="Proyecto energético">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXetNPXiUmSDbNqNNaSFsGAiiRckdbup5KWA&s" alt="Actividad minera">
+    <img src="https://energiminas.com/wp-content/uploads/2025/02/3-1024x616.jpg" alt="Reunión institucional">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbM5tsyi_7h56ax8xl-N9MS_srxS-ZBK5TBw&s" alt="Infraestructura energética">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE-HCzl_wdjnUUNBmFtE4JuoPd5-ewumNTTw&s" alt="Trabajo técnico">
+    <img src="https://www.desdeadentro.pe/wp-content/uploads/2024/06/Charlas-MINEM.jpg" alt="Evento oficial">
+  </div>
+</section>
+
+<section id="ubicacion">
+  <h3>Ubicación – Sede Central</h3>
+  <p>Av. Las Artes Sur 260, San Borja – Lima, Perú</p>
+
+  <div class="mapa">
+    <iframe
+      src="https://www.google.com/maps?q=Ministerio%20de%20Energ%C3%ADa%20y%20Minas%20San%20Borja&output=embed"
+      width="100%" height="100%" style="border:0;" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 <span>Ministerio de Energía y Minas</span> – Gobierno del Perú</p>
+  <p>Página institucional referencial</p>
+</footer>
+
+</body>
+</html>
